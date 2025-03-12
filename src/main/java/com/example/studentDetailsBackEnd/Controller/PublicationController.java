@@ -2,6 +2,8 @@ package com.example.studentDetailsBackEnd.Controller;
 
 import com.example.studentDetailsBackEnd.Model.Publication;
 import com.example.studentDetailsBackEnd.Service.PublicationService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,6 +14,7 @@ public class PublicationController {
 
     private final PublicationService publicationService;
 
+    @Autowired
     public PublicationController(PublicationService publicationService) {
         this.publicationService = publicationService;
     }
